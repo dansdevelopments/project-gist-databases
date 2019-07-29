@@ -30,7 +30,6 @@ def test_search_with_created_date_equals(db):
 ### Optional functionality
 ### Uncomment the tests that you want to implement
 
-"""
 def test_search_with_created_date_gte(db):
     d = datetime(2017, 5, 10, 16, 2, 54)
     gists = search_gists(db, created_at__gte=d)
@@ -38,7 +37,6 @@ def test_search_with_created_date_gte(db):
 
     gist = gists[0]
     assert gist.github_id == '4232a4cdad00bd92a7a64cf3e2795820'
-
 
 def test_search_with_created_date_lt(db):
     d = datetime(2014, 11, 28)
@@ -54,7 +52,6 @@ def test_search_with_created_date_lt(db):
     gist = gists[2]
     assert gist.github_id == '18bdf248a679155f1381'
 
-
 def test_search_with_created_date_lte(db):
     d = datetime(2014, 5, 3, 20, 26, 8)
     gists = search_gists(db, created_at__lte=d)
@@ -62,7 +59,6 @@ def test_search_with_created_date_lte(db):
 
     gist = gists[0]
     assert gist.github_id == '18bdf248a679155f1381'
-
 
 def test_search_with_multiple_and_params(db):
     d = datetime(2014, 5, 3, 20, 26, 8)
@@ -73,7 +69,6 @@ def test_search_with_multiple_and_params(db):
     gist = gists[0]
     assert gist.github_id == '18bdf248a679155f1381'
 
-
 def test_search_with_multiple_dates(db):
     d = datetime(2014, 5, 3, 20, 26, 8)
     gists = search_gists(db, created_at__lte=d, updated_at__gte=d)
@@ -81,4 +76,3 @@ def test_search_with_multiple_dates(db):
 
     gist = gists[0]
     assert gist.github_id == '18bdf248a679155f1381'
-"""
